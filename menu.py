@@ -10,6 +10,12 @@ def add_item(self, name, price):
 def get_price(self, name):
   return self.menu_items.get(name, None)
 
+def update_price(self, name, new_price):
+  if name in self.menu_items:
+    self.menu_items[name] = new_price
+    return True
+  return False
+
 def main():
   menu = RestaurantMenu()
   # Add initial menu items
