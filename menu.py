@@ -1,4 +1,4 @@
-//code here
+# code here
 
 class RestaurantMenu:
   def __init__(self):
@@ -21,6 +21,17 @@ def main():
   # Add initial menu items
   menu.add_item("Burger", 10.99)
   menu.add_item("Fries", 4.99)
+
+# Update the price of an item
+updated = menu.update_price("Burger", 12.99)
+if updated:
+  print("Price updated successfully.")
+else:
+  print("Item not found.")
+
+# To Verify the update
+price = menu.get_price("Burger")
+print(f"Updated price of Burger: {price}")
 
 if __name__ == "__main__":
   main()
