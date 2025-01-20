@@ -16,6 +16,11 @@ def update_price(self, name, new_price):
     return True
   return False
 
+def display_menu(self):
+print("Menu Items:")
+  for item, price in self.menu_items.items():
+    print (f"{item}: ${price:.2f}")
+
 def main():
   menu = RestaurantMenu()
   # Add initial menu items
@@ -33,5 +38,8 @@ else:
 price = menu.get_price("Burger")
 print(f"Updated price of Burger: {price}")
 
+# Display Menu
+ menu.display_menu()
+   
 if __name__ == "__main__":
   main()
