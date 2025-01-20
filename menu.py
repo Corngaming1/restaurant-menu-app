@@ -10,12 +10,6 @@ def add_item(self, name, price):
 def get_price(self, name):
   return self.menu_items.get(name, None)
 
-def update_price(self, name, new_price):
-  if name in self.menu_items:
-    self.menu_items[name] = new_price
-    return True
-  return False
-
 def display_menu(self):
 print("Menu Items:")
   for item, price in self.menu_items.items():
@@ -26,17 +20,6 @@ def main():
   # Add initial menu items
   menu.add_item("Burger", 10.99)
   menu.add_item("Fries", 4.99)
-
-# Update the price of an item
-updated = menu.update_price("Burger", 12.99)
-if updated:
-  print("Price updated successfully.")
-else:
-  print("Item not found.")
-
-# To Verify the update
-price = menu.get_price("Burger")
-print(f"Updated price of Burger: {price}")
 
 # Display Menu
  menu.display_menu()
