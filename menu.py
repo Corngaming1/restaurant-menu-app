@@ -5,7 +5,7 @@ class RestaurantMenu:
     self.menu_items = {}
 
 
- def add_item(self, name, price):
+  def add_item(self, name, price):
     self.menu_items[name] = price
 
   def get_price(self, name):
@@ -13,8 +13,8 @@ class RestaurantMenu:
   
   def display_menu(self):
     print("Menu Items:")
-  for item, price in self.menu_items.items():
-    print (f"{item}: ${price:.2f}")
+    for item, price in self.menu_items.items():
+      print (f"{item}: ${price:.2f}")
 
   def remove_item(self, name):
     if name in self.menu_items:
@@ -22,7 +22,7 @@ class RestaurantMenu:
       return True
     return False
   
-   def update_price(self, name, new_price):
+  def update_price(self, name, new_price):
         if name in self.menu_items:
             self.menu_items[name] = new_price
             return True
@@ -34,9 +34,9 @@ def main():
     menu.add_item("Burger", 10.99)
     menu.add_item("Fries", 4.99)
     
-     menu.display_menu()
+    menu.display_menu()
       
-     menu.remove_item("Fries")
+    menu.remove_item("Fries")
 
     # Update the price of an item
     updated = menu.update_price("Burger", 12.99)
@@ -49,7 +49,7 @@ def main():
     price = menu.get_price("Burger")
     print(f"Updated price of Burger: {price}")
     
-     menu.display_menu()
+    menu.display_menu()
 
 if __name__ == "__main__":
 
