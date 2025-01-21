@@ -21,6 +21,7 @@ def main():
   menu.add_item("Burger", 10.99)
   menu.add_item("Fries", 4.99)
 
+
 # Display Menu
  menu.display_menu()
    
