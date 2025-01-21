@@ -1,8 +1,12 @@
+
+# code here
+
 class RestaurantMenu:
   def __init__(self):
     self.menu_items = {}
 
-  def add_item(self, name, price):
+
+ def add_item(self, name, price):
     self.menu_items[name] = price
 
   def get_price(self, name):
@@ -19,9 +23,11 @@ def main():
   # Add initial menu items
   menu.add_item("Burger", 10.99)
   menu.add_item("Fries", 4.99)
+
   
   menu.remove_item("Fries")
   
-if __name__== "__main__":
+
+if __name__ == "__main__":
 
   main()
