@@ -37,6 +37,7 @@ def main():
     menu.display_menu()
       
     menu.remove_item("Fries")
+    print("remove successfully ")
 
     # Update the price of an item
     updated = menu.update_price("Burger", 12.99)
